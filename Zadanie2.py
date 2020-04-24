@@ -32,25 +32,24 @@ def drawing_numbers():
     random.shuffle(numbers)
     return numbers[:6]
 
+#function comparing users numbers to drawn numbers
+def lotto():
+    user_numbers = choice()
+    print("Your numbers:")
+    print_numbers(user_numbers)
 
+    random_numbers = drawing_numbers()
+    print("Lotto numbers:")
+    print_numbers(random_numbers)
 
+#part of function matching numbers
+    hits = 0
+    for number in user_numbers:
+        if number in random_numbers:
+            hits += 1
 
+    print(f"You hit {hits} {'number' if hits == 1 else 'numbers'}!"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#tego nie rozumiem - pojawia się błąd którego nie ograniam - do popytania M/W
+if __name__ == '__main__'
+    lotto()
